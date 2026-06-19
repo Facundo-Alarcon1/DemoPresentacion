@@ -1,8 +1,6 @@
 # Presentación: Tareas Programadas y Carga de Archivos
 
-Como estás trabajando en un proyecto con Java (Spring Boot), he adaptado la presentación y los ejemplos prácticos a esta tecnología, que es el estándar de la industria.
 
----
 
 ## Tema 1: Tareas Programadas (Scheduled Tasks)
 
@@ -133,6 +131,3 @@ public class ArchivoController {
 ```
 
 ---
-### Consejos para la presentación:
-*   **Demostración (Tareas):** Puedes levantar el servidor de Spring Boot durante la presentación y mostrar en la consola cómo se imprime el mensaje del `@Scheduled` automáticamente cada 10 segundos.
-*   **Demostración (Archivos):** Puedes usar herramientas como **Postman** o **Insomnia** para simular que un cliente sube una imagen al endpoint `/api/archivos/subir-foto` (usando `Body -> form-data -> file`). Luego puedes abrir la carpeta en tu computadora para mostrar que la foto efectivamente se guardó.
