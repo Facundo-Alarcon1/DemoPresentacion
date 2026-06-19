@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo: Tareas Programadas y Archivos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Panel de Demostración</h1>
+            <p>Spring Boot: Tareas Programadas & Carga de Archivos</p>
+        </header>
+
+        <main>
+            <!-- File Upload Section -->
+            <section class="card upload-section">
+                <div class="card-header">
+                    <h2>Carga de Archivos</h2>
+                    <span class="badge">Multipart/form-data</span>
+                </div>
+                <div class="upload-area" id="uploadArea">
+                    <form id="uploadForm">
+                        <label for="fileInput" class="custom-file-upload">
+                            <span class="icon">📁</span>
+                            <span id="fileName">Selecciona un archivo para subir...</span>
+                        </label>
+                        <input type="file" id="fileInput" name="file" required>
+                        <button type="submit" class="btn primary-btn">Subir al Servidor</button>
+                    </form>
+                </div>
+                <div id="uploadStatus" class="status-message"></div>
+            </section>
+
+            <!-- Scheduled Tasks Section -->
+            <section class="card tasks-section">
+                <div class="card-header">
+                    <h2>Tareas Programadas</h2>
+                    <span class="badge">@Scheduled</span>
+                </div>
+                <div class="logs-container">
+                    <div class="logs-header">
+                        <span>Registro (Últimas ejecuciones en 2do plano)</span>
+                        <div class="live-indicator">
+                            <span class="dot"></span> En vivo
+                        </div>
+                    </div>
+                    <ul id="logsList" class="logs-list">
+                        <li class="log-item empty-log">Esperando a que las tareas se ejecuten...</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
